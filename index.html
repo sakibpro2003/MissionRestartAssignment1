@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <style type="text/tailwindcss">
+    <style type="text/tailwindcss">
       @theme {
         --color-clifford: #da373d;
       }
     </style>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline bg-red">
-      Hello world!
-    </h1>
-    <script src="./script.js"></script>
+    <h1 class="text-3xl font-bold underline bg-red">Hello world!</h1>
+
+    <button id="loadProductsBtn" class="btn btn-primary bg-black text-white px-3 py-1 rounded">
+      Load Products
+    </button>
+
+    <div id="product" class="mt-4 space-y-2"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
-
