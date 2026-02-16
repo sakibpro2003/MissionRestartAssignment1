@@ -10,22 +10,28 @@ const createTrendingCard = (product) => {
 
   return `
     <div class="card bg-base-100 shadow-sm">
-      <figure class="h-56 bg-white p-4">
+      <figure class="h-56 p-4 bg-slate-200 ">
         <img src="${product.image}" alt="${product.title}" class="h-full object-contain" />
       </figure>
       <div class="flex justify-between px-6 pt-4 text-sm">
-        <div class="badge badge-outline badge-info">${product.category}</div>
+        <div class="badge  badge-outline badge-info">${product.category}</div>
         <p class="content-center"><i class="fa-solid fa-star"></i> ${rating} (${count})</p>
       </div>
       <div class="card-body">
         <h2 class="card-title">${product.title}</h2>
         <p>${shortDescription}</p>
+        <p class="font-bold text-xl">$${product.price}</p>
         <div class="card-actions flex justify-between items-center">
-          <p class="font-bold text-primary">$${product.price}</p>
-          <button class="btn btn-primary">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Add
-          </button>
+          <div class="flex gap-2 w-full">
+            <button class="btn btn-outline btn-primary btn-sm flex-1">
+              <i class="fa-regular fa-eye"></i>
+              Details
+            </button>
+            <button class="btn btn-primary btn-sm flex-1">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Add
+            </button>
+          </div>
         </div>
       </div>
     </div>

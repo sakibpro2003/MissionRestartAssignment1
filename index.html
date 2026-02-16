@@ -23,12 +23,28 @@
       }
     </style>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- Navbar -->
-    <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar bg-base-100 shadow-sm px-2 md:px-6">
       <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <a href="index.html" class="btn btn-ghost text-xl text-primary"
+          >SwiftCart</a
+        >
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end gap-2">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <!-- <button class="btn btn-sm md:btn-md"> -->
+        <!-- </button> -->
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -48,105 +64,97 @@
             tabindex="-1"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li><a>Home</a></li>
-            <li><a>Products</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-xl text-primary">SwiftCart</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>Products</a></li>
-          <li><a>About</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
-      <div class="navbar-end">
-        <a class="btn">Button</a>
       </div>
     </div>
 
     <!-- Banner -->
     <div
-      class="hero h-96"
+      class="hero min-h-[70vh] md:h-96"
       style="background-image: url(&quot;./assets/banner.png&quot;)"
     >
       <div class="hero-overlay"></div>
-      <div class="hero-content text-neutral-content justify-start">
+      <div
+        class="hero-content text-neutral-content justify-center md:justify-start text-center md:text-left px-4"
+      >
         <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">Best Collection For You</h1>
+          <h1 class="mb-5 text-3xl md:text-5xl font-bold">
+            Best Collection For You
+          </h1>
           <p class="mb-5">
             Discover the latest trends in fashio, electronics, and more. Shop
             with confidence and style at SwiftCart.
           </p>
-          <button class="btn btn-primary">Shop Now</button>
+          <button class="btn btn-primary mx-auto md:mx-0">Shop Now</button>
         </div>
       </div>
     </div>
 
     <!-- Why choose Us  -->
-    <div class="mt-10 bg-[#F9FAFB]">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold">Why Choose Us</h1>
+    <div class="mt-10 bg-[#F9FAFB] px-4 py-12 md:px-8">
+      <div class="text-center max-w-6xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold">Why Choose Us</h1>
         <p class="font-light mt-4">
           We provide the best shopping experience with top-notch services
         </p>
       </div>
-      <div class="flex gap-10 justify-center mt-10">
-        <div class="w-60 bg-white rounded-md shadow-sm relative p-6">
+      <div class="grid gap-6 mt-10 max-w-6xl mx-auto sm:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white rounded-md shadow-sm p-6">
           <div
-            class="w-10 h-10 bg-sec flex justify-center items-center p-6 border-4 border-white absolute bottom-28 rounded-md shadow-md left-4"
+            class="w-12 h-12 bg-sec flex justify-center items-center rounded-md shadow-md mb-4"
           >
-            <i class="fa-regular fa-truck text-2xl text-primary"></i>
+            <i class="fa-solid fa-truck-fast text-xl text-primary"></i>
           </div>
           <h4 class="font-bold">Free Delivery</h4>
           <p class="text-sm font-light">
             Get your orders delivered to your doorstep quickly and efficiently
           </p>
         </div>
-        <div class="w-60 bg-white rounded-md shadow-sm relative p-6">
+        <div class="bg-white rounded-md shadow-sm p-6">
           <div
-            class="w-10 h-10 bg-sec flex justify-center items-center p-6 border-4 border-white absolute bottom-28 rounded-md shadow-md left-4"
+            class="w-12 h-12 bg-sec flex justify-center items-center rounded-md shadow-md mb-4"
           >
-            <i class="fa-regular fa-truck text-2xl text-primary"></i>
+            <i class="fa-solid fa-headset text-xl text-primary"></i>
           </div>
           <h4 class="font-bold">24/7 Support</h4>
           <p class="text-sm font-light">Our support system is available</p>
         </div>
-        <div class="w-60 bg-white rounded-md shadow-sm relative p-6">
+        <div class="bg-white rounded-md shadow-sm p-6">
           <div
-            class="w-10 h-10 bg-sec flex justify-center items-center p-6 border-4 border-white absolute bottom-28 rounded-md shadow-md left-4"
+            class="w-12 h-12 bg-sec flex justify-center items-center rounded-md shadow-md mb-4"
           >
-            <i class="fa-regular fa-truck text-2xl text-primary"></i>
+            <i class="fa-solid fa-shield-halved text-xl text-primary"></i>
           </div>
-          <h4 class="font-bold">Free Delivery</h4>
+          <h4 class="font-bold">Secure Payment</h4>
           <p class="text-sm font-light">
-            Get your orders delivered to your doorstep quickly and efficiently
+            Your transactions are protected with trusted and secure checkout.
           </p>
         </div>
-        <div class="w-60 bg-white rounded-md shadow-sm relative p-6">
+        <div class="bg-white rounded-md shadow-sm p-6">
           <div
-            class="w-10 h-10 bg-sec flex justify-center items-center p-6 border-4 border-white absolute bottom-28 rounded-md shadow-md left-4"
+            class="w-12 h-12 bg-sec flex justify-center items-center rounded-md shadow-md mb-4"
           >
-            <i class="fa-regular fa-truck text-2xl text-primary"></i>
+            <i class="fa-solid fa-rotate-left text-xl text-primary"></i>
           </div>
-          <h4 class="font-bold">Free Delivery</h4>
+          <h4 class="font-bold">Easy Returns</h4>
           <p class="text-sm font-light">
-            Get your orders delivered to your doorstep quickly and efficiently
+            Return products quickly and hassle-free if they are not a good fit.
           </p>
         </div>
       </div>
     </div>
 
     <!-- Trending Now -->
-    <div class="px-6 py-10 flex flex-col justify-center items-center">
-      <h2 class="font-bold text-3xl mb-6 justify-start w-3/5">Trending Now</h2>
+    <div class="px-4 py-10 md:px-8">
+      <h2 class="font-bold text-3xl mb-6 max-w-6xl mx-auto">Trending Now</h2>
       <div
         id="trending"
-        class="grid w-3/5 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        class="grid gap-6 max-w-6xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       >
       </div>
     </div>
@@ -155,7 +163,7 @@
 
     <!-- Footer  -->
     <footer
-      class="footer sm:footer-horizontal bg-base-200 text-base-content p-10"
+      class="footer sm:footer-horizontal bg-base-200 text-base-content p-6 md:p-10"
     >
       <nav>
         <h6 class="footer-title">Services</h6>
@@ -166,8 +174,8 @@
       </nav>
       <nav>
         <h6 class="footer-title">Company</h6>
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Contact</a>
+        <a href="about.html" class="link link-hover">About us</a>
+        <a href="contact.html" class="link link-hover">Contact</a>
         <a class="link link-hover">Jobs</a>
         <a class="link link-hover">Press kit</a>
       </nav>
@@ -179,7 +187,7 @@
       </nav>
       <form>
         <h6 class="footer-title">Newsletter</h6>
-        <fieldset class="w-80">
+        <fieldset class="w-full max-w-xs">
           <label>Enter your email address</label>
           <div class="join">
             <input

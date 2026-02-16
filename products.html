@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftCart | All Products</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #6856f7;
+        --color-sec: #eef2ff;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 min-h-screen">
+    <div class="navbar bg-base-100 shadow-sm px-2 md:px-6">
+      <div class="navbar-start">
+        <a href="index.html" class="btn btn-ghost text-xl text-primary"
+          >SwiftCart</a
+        >
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="font-semibold text-primary">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end gap-2">
+        <button class="btn btn-sm md:btn-md">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Cart
+        </button>
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="font-semibold text-primary">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main class="px-4 py-10 md:px-8">
+      <div class="max-w-6xl mx-auto mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold">All Products</h1>
+        <p class="text-slate-600 mt-2">
+          Browse all available products from the API.
+        </p>
+      </div>
+
+      <div class="max-w-6xl mx-auto mb-6">
+        <div id="categoryFilters" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div
+        id="productsLoader"
+        class="max-w-6xl mx-auto flex justify-center items-center py-10"
+      >
+        <span class="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+
+      <div
+        id="allProductsGrid"
+        class="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      ></div>
+
+      <p id="productsError" class="text-center text-red-500 mt-6 hidden">
+        Failed to load products. Please try again.
+      </p>
+    </main>
+
+    <footer
+      class="footer sm:footer-horizontal bg-base-200 text-base-content p-6 md:p-10"
+    >
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a href="about.html" class="link link-hover">About us</a>
+        <a href="contact.html" class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+      <form>
+        <h6 class="footer-title">Newsletter</h6>
+        <fieldset class="w-full max-w-xs">
+          <label>Enter your email address</label>
+          <div class="join">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item"
+            />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </footer>
+
+    <script src="products.js"></script>
+  </body>
+</html>
