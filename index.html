@@ -142,36 +142,12 @@
     </div>
 
     <!-- Trending Now -->
-    <div>
-      <h2 class="font-bold text-3xl">Trending Now</h2>
-
-      <div>
-        <!-- card div  -->
-        <div class="card bg-base-100 w-96 shadow-sm">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-
-          <div class="flex justify-between px-6 text-sm">
-            <div class="badge badge-outline badge-info">Info</div>
-            <p class="content-center">
-                <i  class="fa-solid fa-star"></i>3.9(333)
-            </p>
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
+    <div class="px-6 py-10 flex flex-col justify-center items-center">
+      <h2 class="font-bold text-3xl mb-6 justify-start w-3/5">Trending Now</h2>
+      <div
+        id="trending"
+        class="grid w-3/5 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      >
       </div>
     </div>
 
